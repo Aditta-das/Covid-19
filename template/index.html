@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load widget_tweaks %}
+  <body style="background-image:url('corona.jpeg'); background-repeat:no-repeat; background-size:cover;">
+    <div class="row justify-content-center" style="margin-top:240px;">
+          <h1>COVID-19</h1>
+    </div>
+    <div class="row justify-content-center">
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Let's Prevent</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+          <h3 style="color:#fff;">COVID-19</h3>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="text-center">Are you affected or not?</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="name">Enter Full Name</label>
+                  {% render_field form.name class="form-control" placeholder="Ex: Aditta Das Nishad" %}
+                  <label for="age">What is your age?</label>
+                  {% render_field form.age class="form-control" placeholder="Ex: 20" %}
+                  <h5 style="text-align:center; margin-top:12px;">Fill The Full Form Please</h5>
+                <div class="col-lg-12">
+                <label for="symp1">Have Shortness Of Breath?</label>
+
+                    {% render_field form.breath class="form-check form-check-inline" style="margin:12px;" %}
+                    <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                </div>
+
+                <div class="col-lg-12">
+                <label for="symp1">Have Fever?</label>
+
+                    {% render_field form.fever class="form-check form-check-inline" style="margin:12px;" %}
+                    <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+
+                </div>
+
+                <div class="col-lg-12">
+                <label for="symp1">Have You Dry Cough?</label>
+
+                    {% render_field form.cough class="form-check form-check-inline" style="margin:12px;" %}
+                    <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                  </div>
+
+                  <div class="col-lg-12">
+                <label for="symp1">Have Chills and body aches?</label>
+
+                    {% render_field form.chills class="form-check form-check-inline" style="margin:12px;" %}
+                    <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                  </div>
+
+                  <div class="col-lg-12">
+                  <label for="symp1">Have Sudden Confusion?</label>
+
+                      {% render_field form.sudden_confusion class="form-check form-check-inline" style="margin:12px;" %}
+                      <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                    </div>
+
+                  <div class="col-lg-12">
+                  <label for="symp1">Have any Digestive Issue?</label>
+
+                      {% render_field form.digestive class="form-check form-check-inline" style="margin:12px;" %}
+                      <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                    </div>
+
+                    <div class="col-lg-12">
+                    <label for="symp1">Have Pink eye?</label>
+
+                        {% render_field form.pink_eye class="form-check form-check-inline" style="margin:12px;" %}
+                        <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                    </div>
+
+                    <div class="col-lg-12">
+                  <label for="symp1">Loss of smell and taste?</label>
+
+                      {% render_field form.loss_taste class="form-check form-check-inline" style="margin:12px;" %}
+                      <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                    </div>
+
+                    <div class="col-lg-12">
+                  <label for="symp1">Fatigue, Headache, sorethroat?</label>
+
+                      {% render_field form.fatigue class="form-check form-check-inline" style="margin:12px;" %}
+                      <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                    </div>
+
+                    <div class="col-lg-12">
+                  <label for="symp1">Congestion?</label>
+
+                      {% render_field form.congestion class="form-check form-check-inline" style="margin:12px;" %}
+                      <label class="form-check-label" for="defaultCheck1">Yes</label>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                  <button class="btn btn-primary btn-lg btn-block" value="submit">Submit</button>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  </body>
+{% endblock %}
+

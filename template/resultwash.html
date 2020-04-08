@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card" style="margin-top:115px;">
+            <div class="card-body">
+              <img src="{% static 'wash.png' %}" class="card-img-right" style="width:110px;height:118px;">
+              <h5 class="card-title">Wash Your Hand</h5>
+              <p class="card-text">Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</p>
+              <h5 class="card-title">Cover Nose</h5>
+              <p class="card-text">Cover your nose and mouth with a disposable tissue or fixed elbow when you coun=gh or sneeze</p>
+              <h5 class="card-title">Avoid close contact</h5>
+              <p class="card-text">Avoid close contact (1 meter or 3 feet) with people who are unwell</p>
+              <h5 class="card-title">Stay Home</h5>
+              <p class="card-text">Stay Home and self-isolate from others in the householdif you feel unwell</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card" style="margin-top:115px;">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align:center;">You No Sign Of Corona</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+{% endblock %}
